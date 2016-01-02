@@ -2,7 +2,7 @@
 @mutex = Mutex.new #线程同步类
 def buyTicket(name,buy_num)
 	 @mutex.lock  #锁 关门
-	# Thread.pass  #这里有此有何用
+	# Thread.pass  #这里有此有何用 <显式的线程调度>
 	if @countnum>buy_num then
 		@countnum-=buy_num
 		puts   "#{name}购买到了#{buy_num}张票"
